@@ -1,0 +1,291 @@
+// .e-commerce-slider:nth-child(1) {
+//   div {
+//     span {
+//       animation-name: hideAndShow, topIn;
+//       animation-duration: 1s, 0.7s;
+//       animation-timing-function: ease-in, linear;
+//       animation-iteration-count: 1, 1;
+//       animation-fill-mode: forwards, forwards;
+//       animation-delay: 0s, 1s;
+//     }
+//     h1 {
+//       animation-name: hideAndShow, bottomIn;
+//       animation-duration: 1s, 1s;
+//       animation-timing-function: ease-in, linear;
+//       animation-iteration-count: 1, 1;
+//       animation-fill-mode: forwards, forwards;
+//       animation-delay: 0s, 2s;
+//     }
+//     button {
+//       animation-name: hideAndShow, scale;
+//       animation-duration: 1s, 0.6s;
+//       animation-timing-function: ease-in, ease-in;
+//       animation-iteration-count: 1, 1;
+//       animation-fill-mode: forwards, forwards;
+//       animation-delay: 0s, 3s;
+//     }
+//   }
+// }
+
+// .e-commerce-slider:nth-child(2) {
+//   div {
+//     span {
+//       animation-name: hideAndShow, leftInAndSpin;
+//       animation-duration: 0s, 0.7s;
+//       animation-timing-function: ease-in, linear;
+//       animation-iteration-count: 1, 1;
+//       animation-fill-mode: forwards, forwards;
+//       animation-delay: 0s, 1s;
+//     }
+//     h1 {
+//       animation-name: hideAndShow, rightIn;
+//       animation-duration: 0s, 0.7s;
+//       animation-timing-function: ease-in, linear;
+//       animation-iteration-count: 1, 1;
+//       animation-fill-mode: forwards, forwards;
+//       animation-delay: 0s, 2s;
+//     }
+//     button {
+//       animation-name: hideAndShow, bottomIn;
+//       animation-duration: 1s, 0.6s;
+//       animation-timing-function: ease-in, ease-in;
+//       animation-iteration-count: 1, 1;
+//       animation-fill-mode: forwards, forwards;
+//       animation-delay: 0s, 3s;
+//     }
+//   }
+// }
+
+// .e-commerce-slider:nth-child(3) {
+//   div {
+//     span {
+//       animation-name: hideAndShow, spinRight;
+//       animation-duration: 0s, 0.7s;
+//       animation-timing-function: ease-in, linear;
+//       animation-iteration-count: 1, 1;
+//       animation-fill-mode: forwards, forwards;
+//       animation-delay: 0s, 1s;
+//     }
+//     h1 {
+//       animation-name: hideAndShow, spinLeft;
+//       animation-duration: 0s, 0.7s;
+//       animation-timing-function: ease-in, linear;
+//       animation-iteration-count: 1, 1;
+//       animation-fill-mode: forwards, forwards;
+//       animation-delay: 0s, 2s;
+//     }
+//     button {
+//       animation-name: hideAndShow, spinRight;
+//       animation-duration: 0s, 0.7s;
+//       animation-timing-function: ease-in, ease-in;
+//       animation-iteration-count: 1, 1;
+//       animation-fill-mode: forwards, forwards;
+//       animation-delay: 0s, 3s;
+//     }
+//   }
+// }
+
+// .my-slider:hover .btn-slider {
+//   display: block;
+// }
+
+.e-commerce-slider {
+  img {
+    animation: fadeIn 0.8s ease-in;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+// @keyframes topIn {
+//   0% {
+//     transform: translateY(-500%);
+//     opacity: 0;
+//   }
+//   60% {
+//     opacity: 0;
+//   }
+//   100% {
+//     transform: translateY(0);
+//     opacity: 1;
+//   }
+// }
+
+// @keyframes bottomIn {
+//   from {
+//     transform: translateY(300%);
+//     opacity: 0;
+//   }
+//   to {
+//     transform: translateY(0);
+//     opacity: 1;
+//   }
+// }
+
+// @keyframes leftInAndSpin {
+//   from {
+//     transform: translateX(-200%) rotate(180deg);
+//     opacity: 0;
+//   }
+//   to {
+//     transform: translateX(0) rotate(360deg);
+//     opacity: 1;
+//   }
+// }
+
+// @keyframes rightIn {
+//   0% {
+//     transform: translateX(100%);
+//     opacity: 0;
+//     font-style: italic;
+//   }
+//   50% {
+//     opacity: 0;
+//   }
+//   99% {
+//     transform: translateX(0);
+//     opacity: 1;
+//     font-style: italic;
+//   }
+//   100% {
+//     font-style: normal;
+//     opacity: 1;
+//   }
+// }
+
+// @keyframes hideAndShow {
+//   from {
+//     opacity: 0;
+//   }
+//   to {
+//     opacity: 0;
+//   }
+// }
+
+// @keyframes scale {
+//   from {
+//     transform: scale(0);
+//     opacity: 0;
+//   }
+//   to {
+//     transform: scale(1);
+//     opacity: 1;
+//   }
+// }
+
+// @keyframes spin {
+//   from {
+//     transform: rotate3d(0deg);
+//     opacity: 0;
+//   }
+//   to {
+//     transform: rotate3d(360deg);
+//     opacity: 1;
+//   }
+// }
+
+// @keyframes spinRight {
+//   from {
+//     transform: rotate(270deg);
+//     opacity: 0;
+//   }
+//   to {
+//     transform: rotate(360deg);
+//     opacity: 1;
+//   }
+// }
+
+// @keyframes spinLeft {
+//   from {
+//     transform: rotate(-270deg);
+//     opacity: 0;
+//   }
+//   to {
+//     transform: rotate(-360deg);
+//     opacity: 1;
+//   }
+// }
+
+// .preview-overlay {
+//   display: none;
+//   animation: showPreview 0.3s ease-in;
+//   div {
+//     animation-name: hideAndShow, scale;
+//     animation-duration: 0s, 0.5s;
+//     animation-timing-function: ease-in, ease-in;
+//     animation-fill-mode: forwards, forwards;
+//     animation-iteration-count: 1, 1;
+//     animation-delay: 0s, 0s;
+//   }
+//   span {
+//     animation-name: hideAndShow, bottomIn;
+//     animation-duration: 0s, 0.5s;
+//     animation-timing-function: ease-in, ease-in;
+//     animation-fill-mode: forwards, forwards;
+//     animation-iteration-count: 1, 1;
+//     animation-delay: 0s, 0.2s;
+//   }
+// }
+
+// .preview:hover .preview-overlay {
+//   display: block;
+// }
+
+// @keyframes showPreview {
+//   from {
+//     opacity: 0;
+//   }
+//   to {
+//     opacity: 1;
+//   }
+// }
+
+// .thumbnail-animation {
+//   button {
+//     animation: bottomOutThumb 0.3s ease-out;
+//   }
+//   &:hover {
+//     img {
+//       transform: scale(1.1);
+//     }
+//     button {
+//       bottom: 20%;
+//       animation: bottomInThumb 0.3s ease-in;
+//     }
+//   }
+// }
+
+// @keyframes bottomInThumb {
+//   from {
+//     left: 50%;
+//     transform: translate(-50%, 300%);
+//     opacity: 0;
+//   }
+//   to {
+//     left: 50%;
+//     transform: translateX(-50%, 0%);
+//     opacity: 1;
+//   }
+// }
+
+// @keyframes bottomOutThumb {
+//   from {
+//     left: 50%;
+//     transform: translateX(-50%, 0);
+//     bottom: 20%;
+//     opacity: 1;
+//   }
+//   to {
+//     left: 50%;
+//     transform: translateX(-50%);
+//     bottom: 0;
+//     opacity: 0;
+//   }
+// }
