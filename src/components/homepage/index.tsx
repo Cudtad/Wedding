@@ -5,6 +5,7 @@ import "./style.scss";
 import dayjs from "dayjs";
 import CountdownTimer from "./component/CountdownTimer";
 import Couple from "./component/Couple";
+import Image from "next/image";
 
 var duration = require("dayjs/plugin/duration");
 
@@ -91,11 +92,41 @@ export default function HomePage() {
           </div>
         </div>
       </div>
-      <div className="max-w-screen-xl mx-auto mt-10 flex items-center">
-        <img
-          src="/assets/images/couple/sec-title-flower.png"
-          alt="sec-title-flower"
-        />
+      <div className="max-w-screen-xl mx-auto pt-10 pb-16">
+        <div className="pb-10">
+          <div className="flex flex-col items-center gap-y-2">
+            <img
+              src="/assets/images/couple/sec-title-flower.png"
+              alt="sec-title-flower"
+            />
+            <h3 className=" font-allura text-5xl text-black">
+              Cô dâu & Chú rể
+            </h3>
+            <p className=" text-center font-poppins">
+              Yêu và được yêu là niềm hạnh phúc lớn lao nhất trong cuộc đời mỗi
+              con người, là <br /> món quà quý giá mà cuộc sống đã ban tặng cho
+              chúng ta.
+            </p>
+          </div>
+        </div>
+        <div className="flex items-center justify-center w-full h-96">
+          <div id="couple-husband" className="w-96 h-full"></div>
+          <div className=" bg-[#f9f9f9] flex flex-col justify-center px-5 w-96 h-full">
+            <h3 className=" font-allura text-4xl text-black">Đức Đạt</h3>
+            <p className=" text-xs font-normal">
+              Em là động lực để anh viết tiếp những khát khao
+            </p>
+          </div>
+        </div>
+        <div className="flex items-center justify-center w-full h-96">
+          <div className=" bg-[#f9f9f9] flex flex-col justify-center px-5 w-96 h-full">
+            <h3 className=" font-allura text-4xl text-black">Ngọc Ánh</h3>
+            <p className=" text-xs font-normal">
+              Con đường em chọn là con đường có anh
+            </p>
+          </div>
+          <div id="couple-wife" className="w-96 h-full"></div>
+        </div>
       </div>
     </>
   );
