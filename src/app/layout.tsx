@@ -4,19 +4,19 @@ import clsx from "clsx";
 import Layout from "@/components/common/layout";
 import { Playfair_Display, Poppins, Allura } from "next/font/google";
 
-export const playfair_display = Playfair_Display({
+const playfair_display = Playfair_Display({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-playfair",
 });
-export const poppins = Poppins({
+const poppins = Poppins({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-poppins",
   weight: "400",
 });
 
-export const allura = Allura({
+const allura = Allura({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-allura",
@@ -24,7 +24,7 @@ export const allura = Allura({
 });
 
 export const metadata: Metadata = {
-  title: "e-commerce",
+  title: "Wedding",
   description: "Shopping online",
 };
 

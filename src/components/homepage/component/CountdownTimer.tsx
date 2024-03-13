@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import dayjs from "dayjs";
-
-const duration = require("dayjs/plugin/duration");
+import duration from "dayjs/plugin/duration";
 dayjs.extend(duration);
 
 const CountdownTimer = ({ targetDate }: { targetDate: dayjs.Dayjs }) => {
