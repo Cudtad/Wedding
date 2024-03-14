@@ -128,6 +128,73 @@ export default function HomePage() {
           <div id="couple-wife" className="w-96 h-full"></div>
         </div>
       </div>
+      <section id="section-accessibilities" className="w-full">
+        <div className="flex item-center justify-center gap-x-4 py-7">
+          <div className="bg-[#c89d9c] text-base font-medium font-poppins flex items-center gap-x-1 px-7 py-3 text-white cursor-pointer">
+            <Image
+              width={20}
+              height={20}
+              src="/assets/images/icons/wishes.png"
+              alt="Icon wishes"
+            />
+            Gửi lời chúc
+          </div>
+          <div className="bg-[#c89d9c] text-base font-medium font-poppins flex items-center gap-x-1 px-7 py-3 text-white cursor-pointer">
+            <Image
+              width={20}
+              height={20}
+              src="/assets/images/icons/rsvp4.png"
+              alt="Icon email"
+            />
+            Xác nhận tham dự
+          </div>
+          <div className="bg-[#c89d9c] text-base font-medium font-poppins flex items-center gap-x-1 px-7 py-3 text-white cursor-pointer">
+            <Image
+              width={20}
+              height={20}
+              src="/assets/images/icons/money_bag.png"
+              alt="Icon money"
+            />
+            Mừng cưới
+          </div>
+        </div>
+      </section>
+      <section className="pt-20 max-w-screen-xl mx-auto">
+        <div className="flex flex-col items-center gap-y-4">
+          <Image
+            width={126}
+            height={60}
+            src="/assets/images/couple/sec-title-flower.png"
+            alt="flower"
+          />
+          <h3 className=" font-allura text-5xl text-black">Chuyện tình yêu</h3>
+          <p className=" text-base text-[#444] font-poppins">
+            Yêu nhau là sống bên nhau đến trọn đời là cùng chung vui và cùng
+            gánh vác.
+          </p>
+        </div>
+        <div className="grid grid-cols-11 gap-x-32 mt-12 shadow-2xl py-16 relative">
+          <div className="text-end text-4xl font-allura font-semibold mt-40 col-span-5">
+            Lần đầu chúng ta gặp nhau
+          </div>
+          <div className="col-span-1 flex flex-col items-center justify-between">
+            <div className="h-6 w-6 rounded-full bg-[#c89d9c] -m-8"></div>
+            <div className="h-6 w-6 rounded-full bg-[#c89d9c] -m-8 relative">
+              <div className="h-4 w-4 rounded-full bg-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10"></div>
+            </div>
+          </div>
+          <div className="col-span-5 h-[450px]">
+            <Image
+              width={450}
+              height={450}
+              src="/assets/images/couple/couple_husband.jpeg"
+              alt="Story image"
+              className="object-cover object-top h-full"
+            />
+          </div>
+          <div className="w-1 absolute top-8 bottom-8 left-1/2 -translate-x-1/2 bg-[#c89d9c]"></div>
+        </div>
+      </section>
     </>
   );
 }

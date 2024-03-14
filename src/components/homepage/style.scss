@@ -111,10 +111,16 @@
   background-size: cover;
 }
 
-
 #couple-wife {
   background-image: url("/assets/images/couple/couple_wife.jpeg");
   background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#section-accessibilities {
+  background-image: url("/assets/images/bg-section-accessibilities.png");
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
