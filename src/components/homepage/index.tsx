@@ -6,6 +6,7 @@ import dayjs from "dayjs";
 import CountdownTimer from "./component/CountdownTimer";
 import Couple from "./component/Couple";
 import Image from "next/image";
+import Modal from "../common/modal";
 
 var duration = require("dayjs/plugin/duration");
 
@@ -15,9 +16,15 @@ const sweetsMemoryList = [
   "/assets/images/sweet-memory/sweet_memory1.jpeg",
   "/assets/images/sweet-memory/sweet_memory2.jpeg",
   "/assets/images/sweet-memory/sweet_memory3.jpeg",
-  "/assets/images/sweet-memory/sweet_memory4.jpeg",
+  "/assets/images/sweet-memory/sweet_memory4.jpg",
   "/assets/images/sweet-memory/sweet_memory5.jpeg",
   "/assets/images/sweet-memory/sweet_memory6.jpeg",
+  "/assets/images/sweet-memory/sweet_memory7.jpg",
+  "/assets/images/sweet-memory/sweet_memory8.jpg",
+  "/assets/images/sweet-memory/sweet_memory9.jpg",
+  "/assets/images/sweet-memory/sweet_memory10.jpg",
+  "/assets/images/sweet-memory/sweet_memory11.jpg",
+  "/assets/images/sweet-memory/sweet_memory12.jpg",
 ];
 
 /* eslint-disable @next/next/no-img-element */
@@ -44,6 +51,10 @@ export default function HomePage() {
     },
   ];
 
+  const [indexImage, setIndexImage] = useState<number>(-1);
+  const [isOpenModal, setIsOpenModal] = useState<boolean>(false);
+  console.log(indexImage);
+
   useEffect(() => {
     const intervalSlide = setInterval(() => {
       setSlideIndex((prev) => (slideIndex + 1) % slides.length);
@@ -57,6 +68,11 @@ export default function HomePage() {
 
   const nextSlide = () => {
     setSlideIndex((slideIndex + 1) % slides.length);
+  };
+
+  const handleImageModal = (index: number) => {
+    setIsOpenModal(true);
+    setIndexImage(index);
   };
 
   return (
@@ -285,20 +301,89 @@ export default function HomePage() {
             gánh vác.
           </p>
         </div>
-        <div className="grid grid-cols-3 gap-10">
-          {sweetsMemoryList.map((item) => {
-            return (
-              <div key={item} className="w-full h-full overflow-hidden">
-                <img
-                  src={item}
-                  alt="Image sweet memories"
-                  className="hover:scale-110 transition-all"
-                />
-              </div>
-            );
-          })}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-20">
+          {[0, 1, 2, 3].map((row) => (
+            <div key={row} className="grid gap-4">
+              {[0, 1, 2].map((col) => (
+                <div
+                  key={col}
+                  className=" overflow-hidden"
+                  onClick={() => handleImageModal(row * 3 + col)}
+                >
+                  <img
+                    className="max-w-full rounded-md hover:scale-110 transition-all duration-500 hover:cursor-pointer"
+                    src={sweetsMemoryList[row * 3 + col]}
+                    alt={`Image ${row * 3 + col}`}
+                  />
+                </div>
+              ))}
+            </div>
+          ))}
         </div>
       </section>
+      <section className="mt-20 max-w-screen-xl mx-auto mb-40">
+        <div className="flex flex-col items-center">
+          <h3>Our Wedding</h3>
+          <p>Thời gian & Địa điểm</p>
+        </div>
+        <div className="grid grid-cols-2 mt-10">
+          <div className="flex flex-col">
+            <div className="overflow-hidden border-4 border-solid border-[#c89d9c] p-10 border-b-2 border-r-2">
+              <img
+                src="/assets/images/our-wedding/husband.jpg"
+                alt="Image husband"
+              />
+            </div>
+            <div className="border-4 border-solid border-[#c89d9c] border-t-2 p-10 border-r-2">
+              <p>+ Tiệc độc thân: Thứ 7, 30-03-2024 4:30 PM</p>
+              <p>+ Tiệc cưới: Chủ nhật, 31-03-2024 8:30 AM</p>
+              <p>
+                + Địa chỉ: thôn Bình Đê, xã Gia Khánh, huyện Gia Lộc, tỉnh Hải
+                Dương
+              </p>
+              <p>+ SDT chú rể: 0987505697</p>
+              <a
+                href="https://www.google.com/maps/place/Qu%E1%BA%A7y+thu%E1%BB%91c+Gia+Kh%C3%A1nh/@20.8625698,106.3181437,19.99z/data=!4m6!3m5!1s0x313591ce4539ec4f:0xd05f7904411f34b1!8m2!3d20.8626853!4d106.3182734!16s%2Fg%2F11t9r3glt4?entry=ttu"
+                target="_blank"
+                className="block mt-5 underline text-[#c89d9c]"
+              >
+                Google Map
+              </a>
+            </div>
+          </div>
+          <div className="flex flex-col">
+            <div className="border-4 border-solid border-[#c89d9c] p-10 border-b-2 border-l-2">
+              <p>+ Tiệc độc thân: Thứ 7, 30-03-2024 4:30 PM</p>
+              <p>+ Tiệc cưới: Chủ nhật, 31-03-2024 8:30 AM</p>
+              <p>
+                + Địa chỉ: thôn Bình Đê, xã Gia Khánh, huyện Gia Lộc, tỉnh Hải
+                Dương
+              </p>
+              <p>+ SDT chú rể: 0987505697</p>
+              <a
+                href="https://www.google.com/maps/place/Qu%E1%BA%A7y+thu%E1%BB%91c+Gia+Kh%C3%A1nh/@20.8625698,106.3181437,19.99z/data=!4m6!3m5!1s0x313591ce4539ec4f:0xd05f7904411f34b1!8m2!3d20.8626853!4d106.3182734!16s%2Fg%2F11t9r3glt4?entry=ttu"
+                target="_blank"
+                className="block mt-5 underline text-[#c89d9c]"
+              >
+                Google Map
+              </a>
+            </div>
+            <div className="overflow-hidden border-4 border-solid border-[#c89d9c] p-10 border-t-2 border-l-2">
+              <img
+                src="/assets/images/our-wedding/wife.jpg"
+                alt="Image husband"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <Modal isOpen={isOpenModal} onClose={() => setIsOpenModal(false)}>
+        <img
+          src={sweetsMemoryList[indexImage]}
+          alt="Modal Image"
+          className=" object-cover"
+        />
+      </Modal>
     </>
   );
 }

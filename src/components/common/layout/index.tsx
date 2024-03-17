@@ -10,7 +10,7 @@ export default function Layout({ children }: Props) {
     <main className="mx-auto relative">
       <Header />
       <div>{children}</div>
-      <Footer />
+      {/* <Footer /> */}
     </main>
   );
 }
