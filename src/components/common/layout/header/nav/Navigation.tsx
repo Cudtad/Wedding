@@ -2,26 +2,32 @@
 "use client";
 
 import NavLink from "./NavLink";
+import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import clsx from "clsx";
+import useMobile from "@/hooks/useMobile";
 
 const navigation = [
   {
-    title: "story",
-    href: "/story",
+    title: "couple",
+    // href: "/story",
+    target: "couple", // Thêm target tương ứng với ID của phần cần scroll đến
   },
   {
-    title: "gallery",
-    href: "/gallery",
+    title: "stories",
+    // href: "/gallery",
+    target: "story",
   },
   {
-    title: "event",
-    href: "/event",
+    title: "memories",
+    // href: "/event",
+    target: "sweetMemory",
   },
   {
-    title: "attending",
-    href: "/attending",
+    title: "wedding",
+    // href: "/attending",
+    target: "ourWedding",
   },
 ];
 
@@ -30,52 +36,91 @@ type Props = {
 };
 
 export default function Navigation({ changeText }: Props) {
-  const pathname = usePathname();
+  const [isActive, setIsActive] = useState<string>("");
+  const isMobile = useMobile();
+
+  const handleNavLinkClick = (key: string) => {
+    setIsActive(key);
+    if (key === "couple") {
+      window.scrollTo({
+        top: isMobile ? 620 : 700,
+        behavior: "smooth",
+      });
+    }
+    if (key === "story") {
+      window.scrollTo({
+        top: isMobile ? 2250 : 1900,
+        behavior: "smooth",
+      });
+    }
+    if (key === "sweetMemory") {
+      window.scrollTo({
+        top: isMobile ? 5000 : 4300,
+        behavior: "smooth",
+      });
+    }
+    if (key === "ourWedding") {
+      window.scrollTo({
+        top: isMobile ? 6800 : 5900,
+        behavior: "smooth",
+      });
+    }
+  };
 
   return (
     <div className="w-full flex flex-col justify-center items-center gap-10">
       <div className="flex items-center gap-5">
         {navigation.map((nav, index) => {
-          let localeHref = `/${nav.href}`;
-          if (localeHref.endsWith("/"))
-            localeHref = localeHref.slice(0, localeHref.length - 1);
-          const isActive =
-            nav.href === pathname || pathname.startsWith(localeHref);
+          const active = nav.target === isActive;
           if (index === Math.ceil(navigation.length / 2)) {
             return (
               <>
-                <Link key={index} href="/">
+                <button
+                  key={index}
+                  onClick={() => {
+                    window.scrollTo({
+                      top: 0,
+                      behavior: "smooth",
+                    });
+                  }}
+                >
                   <img
                     src="https://preview.colorlib.com/theme/cozastore/images/icons/logo-01.png.webp"
                     alt="Logo"
                   />
-                </Link>
-                <NavLink
+                </button>
+                <button
                   key={nav.title}
-                  href={localeHref}
-                  active={isActive}
-                  className={clsx("px-2 py-2 text-xl ", {
-                    "text-white": !changeText,
-                    "text-black": changeText,
-                  })}
+                  className={clsx(
+                    "font-semibold text-xs md:text-base hover:text-primary",
+                    {
+                      "text-white": !changeText && !active,
+                      "text-black": changeText && !active,
+                      "text-primary": active,
+                    }
+                  )}
+                  onClick={() => handleNavLinkClick(nav.target)}
                 >
                   {nav.title.toLocaleUpperCase()}
-                </NavLink>
+                </button>
               </>
             );
           }
           return (
-            <NavLink
+            <button
               key={nav.title}
-              href={localeHref}
-              active={isActive}
-              className={clsx("px-2 py-2 text-xl ", {
-                "text-white": !changeText,
-                "text-black": changeText,
-              })}
+              className={clsx(
+                "font-semibold text-xs md:text-base hover:text-primary",
+                active && "text-primary",
+                {
+                  "text-white": !changeText,
+                  "text-black": changeText,
+                }
+              )}
+              onClick={() => handleNavLinkClick(nav.target)}
             >
               {nav.title.toLocaleUpperCase()}
-            </NavLink>
+            </button>
           );
         })}
       </div>

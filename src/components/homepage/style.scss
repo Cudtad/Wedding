@@ -125,6 +125,21 @@
   background-size: cover;
 }
 
+#attendance {
+  animation: moveRightToLeft 0.8s ease-in;
+}
+
+@keyframes moveRightToLeft {
+  from {
+    transform: translateX(300%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 // @keyframes topIn {
 //   0% {
 //     transform: translateY(-500%);

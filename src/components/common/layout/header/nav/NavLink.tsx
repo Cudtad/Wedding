@@ -1,28 +1,25 @@
 import clsx from "clsx";
-import Link from "next/link";
 import React from "react";
 
 type Props = {
   active?: boolean;
   className?: string;
-  href: string;
   children?: React.ReactNode;
-  isTarget?: boolean;
+  onClick?: (event: React.MouseEvent<HTMLAnchorElement>) => void;
 };
 
-const NavLink = ({ active, className, href, children, isTarget }: Props) => {
+const NavLink = ({ active, className, children, onClick }: Props) => {
   return (
-    <Link
-      href={href}
+    <button
       className={clsx(
         "font-semibold text-sm md:text-base hover:text-primary",
         active && "text-primary",
         className
       )}
-      target={isTarget === true ? "_blank" : undefined}
+      onClick={onClick}
     >
       {children}
-    </Link>
+    </button>
   );
 };
 

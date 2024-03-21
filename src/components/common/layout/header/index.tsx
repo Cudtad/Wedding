@@ -22,7 +22,7 @@ export default function Header() {
         changeBg ? "bg-white pb-0 shadow-xl" : "bg-transparent pb-5"
       }`}
     >
-      <div className="flex justify-between items-center py-4 mx-auto max-w-screen-xl">
+      <div className="flex justify-between items-center py-4 mx-auto px-2 md:px-0 md:max-w-screen-xl">
         <Navigation changeText={changeBg} />
       </div>
     </div>
