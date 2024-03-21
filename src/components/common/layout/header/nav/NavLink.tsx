@@ -5,7 +5,7 @@ type Props = {
   active?: boolean;
   className?: string;
   children?: React.ReactNode;
-  onClick?: (event: React.MouseEvent<HTMLAnchorElement>) => void;
+  onClick?: () => void;
 };
 
 const NavLink = ({ active, className, children, onClick }: Props) => {
