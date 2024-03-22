@@ -110,10 +110,10 @@ export default function HomePage() {
             </div>
           ))}
           <div className=" absolute top-3/4 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white flex items-center flex-col justify-center">
-            <h1 className="font-allura text-4xl md:text-7xl font-semibold text-orange-100">
+            <h1 className="font-allura text-3xl md:text-7xl font-semibold text-orange-100">
               Ngọc Ánh & Đức Đạt
             </h1>
-            <p className=" font-poppins text-sm md:text-xl text-center font-semibold my-2">
+            <p className=" font-poppins text-xs md:text-xl text-center font-semibold my-2">
               You are getting married on March 31, 2024
             </p>
             <CountdownTimer targetDate={dayjs("2024-03-31")} />
@@ -238,9 +238,9 @@ export default function HomePage() {
               <Image
                 width={450}
                 height={450}
-                src="/assets/images/couple/couple_husband.jpeg"
+                src="/assets/images/sweet-memory/sweet_memory8.jpg"
                 alt="Story image"
-                className="object-cover object-top h-full"
+                className="object-cover object-center h-full"
               />
             </div>
           </div>
@@ -250,9 +250,9 @@ export default function HomePage() {
               <Image
                 width={450}
                 height={450}
-                src="/assets/images/couple/couple_husband.jpeg"
+                src="/assets/images/story/story2.jpg"
                 alt="Story image"
-                className="object-cover object-top h-full"
+                className="object-cover object-center h-full"
               />
             </div>
             {!isMobile && (
@@ -298,9 +298,9 @@ export default function HomePage() {
               <Image
                 width={450}
                 height={450}
-                src="/assets/images/couple/couple_husband.jpeg"
+                src="/assets/images/story/story3.jpg"
                 alt="Story image"
-                className="object-cover object-top h-full"
+                className="object-cover object-center h-full"
               />
             </div>
           </div>
@@ -310,9 +310,9 @@ export default function HomePage() {
               <Image
                 width={450}
                 height={450}
-                src="/assets/images/couple/couple_husband.jpeg"
+                src="/assets/images/story/story4.jpg"
                 alt="Story image"
-                className="object-cover object-top h-full"
+                className="object-cover object-center h-full"
               />
             </div>
             {!isMobile && (
@@ -415,14 +415,14 @@ export default function HomePage() {
           <div className="flex flex-col-reverse md:flex-col">
             <div className="border-4 border-solid border-[#c89d9c] p-10 md:border-b-2 md:border-l-2 md:space-y-2">
               <li>Tiệc độc thân: Thứ 7, 30-03-2024 4:30 PM</li>
-              <li>Tiệc cưới: Chủ nhật, 31-03-2024 8:30 AM</li>
+              <li>Tiệc cưới: Chủ nhật, 31-03-2024 7:00 AM</li>
               <li>
-                Địa chỉ: thôn Bình Đê, xã Gia Khánh, huyện Gia Lộc, tỉnh Hải
-                Dương
+                Địa chỉ: Khu trung tâm xã Hùng Dũng, huyện Hưng Hà, tỉnh Thái
+                Bình
               </li>
-              <li>SDT chú rể: 0987505697</li>
+              <li>SDT cô dâu: 0984053166</li>
               <a
-                href="https://www.google.com/maps/place/Qu%E1%BA%A7y+thu%E1%BB%91c+Gia+Kh%C3%A1nh/@20.8625698,106.3181437,19.99z/data=!4m6!3m5!1s0x313591ce4539ec4f:0xd05f7904411f34b1!8m2!3d20.8626853!4d106.3182734!16s%2Fg%2F11t9r3glt4?entry=ttu"
+                href="https://www.google.com/maps/place/UBND+X%C3%A3+H%C3%B9ng+D%C5%A9ng/@20.6311276,106.2456058,19.69z/data=!4m6!3m5!1s0x3135eb8855555555:0x7284c81ccd462e42!8m2!3d20.6315098!4d106.2457039!16s%2Fg%2F1tfjybdy?entry=ttu"
                 target="_blank"
                 className="block mt-5 underline text-[#c89d9c]"
               >
@@ -479,19 +479,19 @@ export default function HomePage() {
               />
             </div>
             <div className="border-2 border-solid border-[#c89d9c] rounded-md p-10 bg-white">
-              <h3 className="text-center">Mừng cưới chú rể</h3>
+              <h3 className="text-center">Mừng cưới cô dâu</h3>
               <div className="mt-5  flex justify-center">
                 <img
-                  src="/assets/images/donate/qr_code_husband.jpg"
+                  src="/assets/images/donate/qr_code_wife.jpg"
                   alt="Image QR Code"
                   className="w-40 h-40 border-2 border-solid rounded-sm"
                 />
               </div>
               <div className="mt-5 flex flex-col justify-center items-center gap-y-2">
-                <p>Ngân hàng: BIDV</p>
-                <p>Tên tài khoản: Nguyễn Đức Đạt</p>
-                <p>Số tài khoản: 2171029104</p>
-                <p>Chi nhánh: BIDV-CN TU LIEM</p>
+                <p>Ngân hàng: Vietcombank</p>
+                <p>Tên tài khoản: Pham Ngọc Ánh</p>
+                <p>Số tài khoản: 1041267657</p>
+                <p>Chi nhánh: Trụ sở CN Tây Hà Nội</p>
               </div>
             </div>
           </div>

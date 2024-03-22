@@ -68,8 +68,8 @@ export default function Navigation({ changeText }: Props) {
   };
 
   return (
-    <div className="w-full flex flex-col justify-center items-center gap-10">
-      <div className="flex items-center gap-5">
+    <div className="w-full flex md:justify-center items-center">
+      <div className="flex items-center gap-x-6 md:gap-5">
         {navigation.map((nav, index) => {
           const active = nav.target === isActive;
           if (index === Math.ceil(navigation.length / 2)) {
@@ -85,8 +85,9 @@ export default function Navigation({ changeText }: Props) {
                   }}
                 >
                   <img
-                    src="https://preview.colorlib.com/theme/cozastore/images/icons/logo-01.png.webp"
+                    src="/assets/images/logo.png"
                     alt="Logo"
+                    className="w-10 h-10 md:w-20 md:h-20 rounded-full"
                   />
                 </button>
                 <button
